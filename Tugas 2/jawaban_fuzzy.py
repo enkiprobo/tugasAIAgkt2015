@@ -43,17 +43,17 @@ def main(listOfCrispInput):
         numberOfEmosiLevel = 3 # kecil 0, sedang 1, besar 2
         mFunctionEmosi = [mff.trapesium, mff.trapesium, mff.trapesium]
         mParameterEmosi = []
-        mParameterEmosi.append({"a":0,"b":0,"c":30,"d":40}) # untuk kecil 0
-        mParameterEmosi.append({"a":35,"b":45,"c":60,"d":70}) # untuk sedang 1
-        mParameterEmosi.append({"a":65,"b":75,"c":100,"d":100}) # untuk besar 2
+        mParameterEmosi.append({"a":0,"b":0,"c":60,"d":70}) # untuk kecil 0
+        mParameterEmosi.append({"a":65,"b":65,"c":72,"d":82}) # untuk sedang 1
+        mParameterEmosi.append({"a":60,"b":85,"c":100,"d":100}) # untuk besar 2
 
         numberOfProvokasiLevel = 4 # kecil 0, menuju kecil 1, menuju besar 2, besar 3
         mFunctionProvokasi = [mff.trapesium for i in range(numberOfProvokasiLevel)]
         mParameterProvokasi = []
         mParameterProvokasi.append({"a":0,"b":0,"c":25,"d":30}) # untuk kecil 0
-        mParameterProvokasi.append({"a":10,"b":30,"c":50,"d":55}) # untuk menuju kecil 1
-        mParameterProvokasi.append({"a":40,"b":55,"c":75,"d":80}) # untuk menuju besar 2
-        mParameterProvokasi.append({"a":65,"b":85,"c":100,"d":100}) # untuk besar 3
+        mParameterProvokasi.append({"a":10,"b":30,"c":65,"d":75}) # untuk menuju kecil 1
+        mParameterProvokasi.append({"a":73,"b":75,"c":80,"d":91}) # untuk menuju besar 2
+        mParameterProvokasi.append({"a":85,"b":90,"c":100,"d":100}) # untuk besar 3
 
         numberOfHoaxLevel = 2 # level of fuzzy set in output, 0 for Tidak, 1 for Ya
         mFunctionHoax = [mff.trapesium for i in range(numberOfHoaxLevel)]
@@ -89,7 +89,7 @@ def main(listOfCrispInput):
                 elif i == 0 and j == 1:
                     tempHoax[0].append(min(fSEmosi[i], fSProvokasi[j]))
                 elif i == 0 and j == 2:
-                    tempHoax[1].append(min(fSEmosi[i], fSProvokasi[j]))
+                    tempHoax[0].append(min(fSEmosi[i], fSProvokasi[j]))
                 elif i == 0 and j == 3:
                     tempHoax[1].append(min(fSEmosi[i], fSProvokasi[j]))
                 elif i == 1 and j == 0:
@@ -97,7 +97,7 @@ def main(listOfCrispInput):
                 elif i == 1 and j == 1:
                     tempHoax[0].append(min(fSEmosi[i], fSProvokasi[j]))
                 elif i == 1 and j == 2:
-                    tempHoax[1].append(min(fSEmosi[i], fSProvokasi[j]))
+                    tempHoax[0].append(min(fSEmosi[i], fSProvokasi[j]))
                 elif i == 1 and j == 3:
                     tempHoax[1].append(min(fSEmosi[i], fSProvokasi[j]))
                 elif i == 2 and j == 0:
