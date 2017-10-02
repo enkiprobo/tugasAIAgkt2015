@@ -1,0 +1,2 @@
+Petunjuk menjalankan program adalah 
+dengan men - klik tombol Run(F6) pada program tsb, maka output pada program itu akan muncul. 

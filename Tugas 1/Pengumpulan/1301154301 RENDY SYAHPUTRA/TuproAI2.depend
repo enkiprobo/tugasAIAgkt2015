@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1506172034 source:d:\python\tuproai2\main.cpp
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<cstdlib>
+	<ctime>
+	<math.h>
+	<conio.h>
+

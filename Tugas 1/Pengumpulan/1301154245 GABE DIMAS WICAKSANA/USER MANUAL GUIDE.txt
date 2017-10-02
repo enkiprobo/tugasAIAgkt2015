@@ -1,0 +1,6 @@
+CARA MENJALANKAN PROGRAM ARTIFICIAL INTELLIGENCE SIMULATED ANNEALING
+=======================================================================
+
+1. Run Program
+2. Hasil berupa Nilai fungsi paling minimum serta Accuracy dari program tersebut akan ditampilkan
+

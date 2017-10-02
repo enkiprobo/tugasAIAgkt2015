@@ -1,0 +1,4 @@
+1. Buka program
+2. Masukkan nilai estimasi minimum dari dosen
+3. Jalankan program
+4. Akan di-output nilai dari x1, x2, F(x1,x2) dan akurasi dari model yang telah dibuat

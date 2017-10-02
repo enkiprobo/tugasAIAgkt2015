@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1505902829 source:d:\tubes ai\tubesai\cobacobadulu.cpp
+
+1505916111 source:d:\tubes ai\tubesai\main.cpp
+	<iostream>
+	<time.h>
+	<stdlib.h>
+	<math.h>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1506162929 source:f:\tupro ai ergandhi\tuproai\main.c
+	<stdio.h>
+	<stdlib.h>
+

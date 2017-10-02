@@ -1,0 +1,32 @@
+'''
+Fuzzy Rule Explanation
+
+    Emosi = E, Provokasi = P, Hoax = H
+    E = 0 => kecil, E = 1 => sedang, E = 2 => tinggi
+    P = 0 => kecil, P = 1 => menuju kecil, P = 2 => menuju besar, P = 3 => besar
+    H = 0 => tidak, H = 1 => ya
+'''
+if E == 0 and P == 0:
+    return 0
+elif E == 0 and P == 1:
+    return 0
+elif E == 0 and P == 2:
+    return 1
+elif E == 0 and P == 3:
+    return 1
+elif E == 1 and P == 0:
+    return 0
+elif E == 1 and P == 1:
+    return 0
+elif E == 1 and P == 2:
+    return 1
+elif E == 1 and P == 3:
+    return 1
+elif E == 2 and P == 0:
+    return 0
+elif E == 2 and P == 1:
+    return 1
+elif E == 2 and P == 2:
+    return 1
+elif E == 2 and P == 3:
+    return 1
