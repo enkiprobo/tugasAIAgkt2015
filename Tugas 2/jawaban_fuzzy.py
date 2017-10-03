@@ -82,32 +82,14 @@ def main(listOfCrispInput):
         tempHoax = [[] for i in range(numberOfHoaxLevel)]
         fSHoax = [[] for i in range(numberOfHoaxLevel)]
 
+        yaIf = [(0,3), (1,3), (2,1), (2,2), (2,3)] # (x,y) where x is level of Emosi and y is level of Provokasi, that make Hoax yield value Ya
+
         for i in range(numberOfEmosiLevel):
             for j in range(numberOfProvokasiLevel):
-                if i == 0 and j == 0:
-                    tempHoax[0].append(min(fSEmosi[i], fSProvokasi[j]))
-                elif i == 0 and j == 1:
-                    tempHoax[0].append(min(fSEmosi[i], fSProvokasi[j]))
-                elif i == 0 and j == 2:
-                    tempHoax[0].append(min(fSEmosi[i], fSProvokasi[j]))
-                elif i == 0 and j == 3:
+                if (i,j) in yaIf:
                     tempHoax[1].append(min(fSEmosi[i], fSProvokasi[j]))
-                elif i == 1 and j == 0:
+                else:
                     tempHoax[0].append(min(fSEmosi[i], fSProvokasi[j]))
-                elif i == 1 and j == 1:
-                    tempHoax[0].append(min(fSEmosi[i], fSProvokasi[j]))
-                elif i == 1 and j == 2:
-                    tempHoax[0].append(min(fSEmosi[i], fSProvokasi[j]))
-                elif i == 1 and j == 3:
-                    tempHoax[1].append(min(fSEmosi[i], fSProvokasi[j]))
-                elif i == 2 and j == 0:
-                    tempHoax[0].append(min(fSEmosi[i], fSProvokasi[j]))
-                elif i == 2 and j == 1:
-                    tempHoax[1].append(min(fSEmosi[i], fSProvokasi[j]))
-                elif i == 2 and j == 2:
-                    tempHoax[1].append(min(fSEmosi[i], fSProvokasi[j]))
-                elif i == 2 and j == 3:
-                    tempHoax[1].append(min(fSEmosi[i], fSProvokasi[j]))
 
         fSHoax[0] = max(tempHoax[0])
         fSHoax[1] = max(tempHoax[1])
@@ -152,6 +134,8 @@ def main(listOfCrispInput):
         b += 1
         print "B"+str(b), "|", xEmosi, "|", xProvokasi, "|", apakahHoax
 
+
+# MENJALANKAN PROGRAM UTAMA
 listOfCrispInput = [
     (97, 74),
     (36, 85),
